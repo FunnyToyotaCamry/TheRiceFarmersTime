@@ -1,0 +1,7 @@
+- 👋 Hi, I’m @TheRiceFarmersTime
+- 👀 I’m interested in HTML, C#, and Python!
+- 🌱 I’m currently learning HTML
+- 📫 How to reach me?
+- Guilded: TheRiceFarmer
+- Twitter: TheRiceFarmer6
+- 
