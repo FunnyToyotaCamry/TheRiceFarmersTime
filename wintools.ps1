@@ -24,7 +24,7 @@ $sync.ProcessRunning = $false
 
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Output "Winutil needs to be run as Administrator. Attempting to relaunch."
-    Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "iwr -useb https://christitus.com/win | iex"
+    Start-Process -Verb runas -FilePath powershell.exe -ArgumentList "iwr -useb https://raw.githubusercontent.com/FunnyToyotaCamry/TheRiceFarmersTime/main/wintools.ps1 | iex"
     break
 }
 Function Get-WinUtilCheckBoxes {
@@ -1615,7 +1615,7 @@ function Invoke-WPFShortcut {
     Switch ($ShortcutToAdd) {
         "WinUtil" {
             $SourceExe = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
-            $IRM = 'irm https://christitus.com/win | iex'
+            $IRM = 'irm https://raw.githubusercontent.com/FunnyToyotaCamry/TheRiceFarmersTime/main/wintools.ps1 | iex'
             $Powershell = '-ExecutionPolicy Bypass -Command "Start-Process powershell.exe -verb runas -ArgumentList'
             $ArgumentsToSourceExe = "$powershell '$IRM'"
             $DestinationName = "WinUtil.lnk"
@@ -2417,7 +2417,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <DockPanel Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="0" Width="1100">
-                    <Image Height="50" Width="50" Name="WPFIcon" SnapsToDevicePixels="True" Source="https://christitus.com/images/logo-full.png" Margin="0,10,0,10"/>
+                    <Image Height="50" Width="50" Name="WPFIcon" SnapsToDevicePixels="True" Source="https://raw.githubusercontent.com/FunnyToyotaCamry/TheRiceFarmersTime/main/clinically%20insane.png" Margin="0,10,0,10"/>
                     <Button Content="Install" HorizontalAlignment="Left" Height="40" Width="100"
                         Background="{ButtonInstallBackgroundColor}" Foreground="{ButtonInstallForegroundColor}" FontWeight="Bold" Name="WPFTab1BT"/>
                     <Button Content="Tweaks" HorizontalAlignment="Left" Height="40" Width="100"
